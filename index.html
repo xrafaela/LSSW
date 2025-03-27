@@ -16,7 +16,7 @@
         <ul>
             <li>https://elearning.uab.pt/course/view.php?id=21422</li>
             <li>2024 - 2025</li>
-            <li>XXXXXXXXXXXX</li>
+            <li>Licenciatura em Engenharia Informática</li>
         </ul>
     </div>
 
@@ -26,7 +26,25 @@
     </div>
 
     <footer>
-        <p>© 2025 xrafaela. Todos os direitos reservados.</p>
+        <p>Última atualização: <span id="update-time"></span></p>
+
+    <script>
+        function updateLastModified() {
+            const lastModified = new Date(document.lastModified);
+            const formattedDate = lastModified.toLocaleString('pt-BR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('update-time').textContent = formattedDate;
+        }
+
+        // Atualiza imediatamente ao carregar a página
+        updateLastModified();
+    </script>
     </footer>
 </body>
 </html>
