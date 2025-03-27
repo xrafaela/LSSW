@@ -3,90 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>xrafaela - Perfil</title>
-    <style>
-        body {
-            font-size: 18px; 
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
-            /* Adicionando a imagem de fundo */
-            background-image: url('https://medicinasa.com.br/wp-content/uploads/2023/08/digital-robotica-inteligencia-artificial-inovacao2.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            /* Overlay escuro para melhorar a legibilidade */
-            position: relative;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        /* Overlay escuro para melhorar a legibilidade do texto */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            
-            z-index: -1;
-        }
-        
-        .task { 
-            color: #e8e9ee; 
-            margin: 10px 0; 
-            background-color: rgba(8, 8, 8, 0.8); /* Tornando o fundo levemente transparente */
-            color: white;  
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: underline;
-        }
-        
-        header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 15px;
-            
-            color: white;
-            border-radius: 10px;
-        }
-        
-        header img {
-            max-height: 100px;
-            width: auto;
-            padding: 20px;
-        }
-        
-        footer {
-            margin-top: 15px;
-           
-            color: white;
-            padding: 7px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        
-        table {
-            width: 30%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border: 1px solid #555;
-        }
-        
-        th {
-            background-color: rgba(50, 50, 50, 0.7);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -101,50 +18,96 @@
         </div>
     </header>
     
-    <div class="task">
-    <i><h2><a a href="https://elearning.uab.pt/course/view.php?id=21422" target="_blank">Laboratório de Sistemas e Serviços Web</a></h2></i>
-        <ul>            
-            <a href="https://elearning.uab.pt/course/view.php?id=21422" target="_blank"> LSSW </a> 
-          <br> Licenciatura em Engenharia Informática
-          <br>Nr. Estudante: 1900362
-          <br>2024 - 2025
-        </ul>
-    </div>
-
-    <div class="task">
-        <table border="1">
-            <thead>
-              
-              <tr>
-                <th></th>
-                <th>Data</th>
-                <th>Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>EfolioA</td>
-                <td>09/04/2025</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>EfolioB</td>
-                <td>08/05/2025</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>EfolioG</td>
-                <td>11/06/2025M</td>
-                <td>-</td>
-              </tr>
-            </tbody>
-          </table>
-       
+    <!-- Nova estrutura de duas colunas -->
+    <div class="container">
+        <!-- Coluna de navegação à esquerda -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-target="perfil">Perfil</a></li>
+                <li><a href="#" class="nav-link" data-target="trabalhos">Avaliação</a></li>
+                <li><a href="#" class="nav-link" data-target="recursos">Recursos</a></li>
+                <li><a href="#" class="nav-link" data-target="contato">Contato</a></li>
+            </ul>
+        </div>
+        
+        <!-- Coluna de conteúdo à direita -->
+        <div class="content">
+            <!-- Seção de Perfil -->
+            <div class="content-section active" id="perfil">
+                <div class="task">
+                    <i><h2><a href="https://elearning.uab.pt/course/view.php?id=21422" target="_blank">Laboratório de Sistemas e Serviços Web</a></h2></i>
+                    <ul>            
+                        <li><a href="https://elearning.uab.pt/course/view.php?id=21422" target="_blank">LSSW</a></li> 
+                        <li>Licenciatura em Engenharia Informática</li>
+                        <li>Nr. Estudante: 1900362</li>
+                        <li>2024 - 2025</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Seção de Trabalhos -->
+            <div class="content-section" id="trabalhos">
+                <div class="task">
+                    <h2>Trabalhos e Avaliações</h2>
+                    <table border="1">
+                        <thead>
+                          <tr>
+                            <th>Avaliação</th>
+                            <th>Data</th>
+                            <th>Notas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>EfolioA</td>
+                            <td>09/04/2025</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>EfolioB</td>
+                            <td>08/05/2025</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>EfolioG</td>
+                            <td>11/06/2025</td>
+                            <td>-</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Seção de Recursos -->
+            <div class="content-section" id="recursos">
+                <div class="task">
+                    <h2>Recursos e Links Úteis</h2>
+                    <ul>
+                        <li><a href="https://portal.uab.pt/" target="_blank">Portal UAb</a></li>
+                        <li><a href="https://elearning.uab.pt/" target="_blank">Plataforma de eLearning</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Seção de Contato -->
+            <div class="content-section" id="contato">
+                <div class="task">
+                    <h2>Informações de Contato</h2>
+                    <p>Email: 1900362@estudante.uab.pt</p>
+                    <p>Campus Virtual: <a href="https://elearning.uab.pt/" target="_blank">eLearning UAb</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>    
         <i><p style="font-size: 0.8em;">Última atualização: <span id="update-time"></span></p></i>
+    </footer> 
+    
     <script>
+        // Script para atualizar a data de modificação
         function updateLastModified() {
             const lastModified = new Date(document.lastModified);
             const formattedDate = lastModified.toLocaleString('pt-BR', {
@@ -157,10 +120,32 @@
             });
             document.getElementById('update-time').textContent = formattedDate;
         }
-
-        // Atualiza imediatamente ao carregar a pÃ¡gina
         updateLastModified();
+        
+        // Script para navegação interativa
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove classe ativa de todos os links
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    
+                    // Adiciona classe ativa ao link clicado
+                    this.classList.add('active');
+                    
+                    // Esconde todos os conteúdos
+                    contentSections.forEach(section => section.classList.remove('active'));
+                    
+                    // Mostra o conteúdo correspondente
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
     </script>
-    </footer>
 </body>
 </html>
