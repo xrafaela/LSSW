@@ -30,7 +30,7 @@ body::before {
 .task { 
     color: white;  
     margin: 10px 0; 
-    background-color: 0 0 10px rgba(24, 23, 23, 0.8); /* ERRO AQUI */
+    background-color: 0 0 10px rgba(24, 23, 23, 0.8); 
     padding: 15px; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -163,12 +163,12 @@ footer p {
 
 table {
     width: 30%; /* Usando 100% para melhor responsividade */
-    max-width: 800px; /* Definindo largura m�xima */
+    max-width: 800px; 
     border-collapse: collapse;
     margin: 10px 0; 
     text-align: left;
     margin-left: 0;
-    margin-right: auto; /* Remove qualquer centraliza��o autom�tica */
+    margin-right: auto; 
 }
 
 th, td {
