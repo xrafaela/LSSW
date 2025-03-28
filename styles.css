@@ -1,6 +1,7 @@
 body {
-    font-size: 18px; 
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px; /* Cormorant Garamond geralmente precisa de tamanho maior */
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400; /* Regular para texto normal */
     line-height: 1.6;
    
     background-image: url('https://medicinasa.com.br/wp-content/uploads/2023/08/digital-robotica-inteligencia-artificial-inovacao2.jpg');
@@ -98,8 +99,15 @@ footer {
     padding: 7px;
     text-align: center;
     border-radius: 10px;
-    width: calc(100% - 40px); /* Ajustando largura considerando padding do body */
-    clear: both; /* Garantir que fique abaixo de elementos flutuantes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center !important;
+    margin: 0;
+    width: 100%;
 }
 
 table {
@@ -140,6 +148,8 @@ th {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     color: white; /* Texto principal em branco */
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500; /* Medium para o menu lateral */
 }
 
 /* Estilo do menu de navegação */
@@ -296,4 +306,34 @@ h2, p, li, table, pre {
 
 #recursos *, #contato *, #trabalhos * {
     text-align: left !important;
+}
+
+/* Aplicando Cormorant Garamond ao site */
+
+/* Para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; /* Semibold para títulos */
+    letter-spacing: 0.5px;
+}
+
+/* Para elementos enfatizados */
+strong, b {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700; /* Bold para texto em negrito */
+}
+
+/* Para texto em itálico */
+i, em {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+}
+
+/* Ajustes de tamanho para melhor legibilidade */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
 }
