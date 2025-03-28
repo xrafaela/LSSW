@@ -300,11 +300,10 @@ ul li {
     text-align: left;
 }
 
-/* Corrigindo especificamente tabelas (caso estejam alinhadas � direita) */
 table {
     text-align: left;
     margin-left: 0;
-    margin-right: auto; /* Remove qualquer centraliza��o autom�tica */
+    margin-right: auto; 
 }
 
 /* Corrigindo conte�do textual */
@@ -312,24 +311,22 @@ p, li, pre, td {
     text-align: left;
 }
 
-/* Corre��o para o conte�do de trabalhos */
+
 .trabalho-conteudo {
     text-align: left;
 }
 
-/* Alinhamento para o texto pr�-formatado */
+
 pre {
     text-align: justify;
     font-family: 'Cormorant Garamond', Georgia, serif;
     margin-left: 0;
 }
 
-/* Garantir que flexbox n�o cause alinhamento indesejado */
 .content {
     display: block; /* Caso esteja usando flexbox com justify-content */
 }
 
-/* For�ar alinhamento � esquerda */
 .task, .task * {
     text-align: left !important;
 }
@@ -342,7 +339,7 @@ h2, p, li, table, pre {
     text-align: left !important;
 }
 
-/* Corrigir layout das se��es */
+
 .content-section {
     display: none;
 }
@@ -350,8 +347,6 @@ h2, p, li, table, pre {
 .content-section.active {
     display: block;
 }
-
-/* Corrigir alinhamento espec�fico */
 #recursos, #contato, #trabalhos {
     text-align: left !important;
 }
@@ -360,7 +355,6 @@ h2, p, li, table, pre {
     text-align: left !important;
 }
 
-/* Aplicando Cormorant Garamond ao site */
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -372,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 
 strong, b {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 700; /* Bold para texto em negrito */
+    font-weight: 700; 
 }
 
 
@@ -381,7 +375,7 @@ i, em {
     font-style: italic;
 }
 
-/* Ajustes de tamanho para melhor legibilidade */
+
 h1 {
     font-size: 2.5em;
 }
@@ -397,12 +391,12 @@ h2 {
     text-align: center;
 }
 
-/* Adicionando uma regra extra para o span dentro do update-text */
+
 .update-text span {
     font-family: 'Honk', cursive !important;
 }
 
-/* Estilos específicos para a fonte Honk */
+
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 
 .update-text, 
