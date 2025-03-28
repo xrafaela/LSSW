@@ -33,6 +33,7 @@ body::before {
     padding: 15px; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
    
 }
 
@@ -106,6 +107,9 @@ table {
     max-width: 800px; /* Definindo largura máxima */
     border-collapse: collapse;
     margin: 10px 0; 
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto; /* Remove qualquer centralização automática */
 }
 
 th, td {
@@ -125,6 +129,7 @@ th {
     gap: 20px;
     margin-bottom: 20px;
     background-color: rgba(12, 12, 12, 0.7); 
+    text-align: left;
 }
 
 /* Coluna de navegação */
@@ -178,11 +183,14 @@ th {
 /* Coluna de conteúdo */
 .content {
     flex: 1;
+    text-align: left;
+    display: block; /* Caso esteja usando flexbox com justify-content */
 }
 
 /* Conteúdo */
 .content-section {
     display: none;
+    text-align: left;
 }
 
 .content-section.active {
@@ -192,6 +200,7 @@ th {
 /* Melhorias para listas */
 ul li {
     margin-bottom: 5px;
+    text-align: left;
 }
 
 /* Estilo para submenus */
@@ -212,6 +221,7 @@ ul li {
 
 .submenu li {
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .has-submenu > a::after {
@@ -222,4 +232,68 @@ ul li {
 
 .has-submenu > a.open::after {
     content: "?";
+}
+
+/* Alinhamento geral à esquerda */
+.container, .content, .content-section, .task {
+    text-align: left;
+}
+
+/* Corrigindo especificamente tabelas (caso estejam alinhadas à direita) */
+table {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto; /* Remove qualquer centralização automática */
+}
+
+/* Corrigindo conteúdo textual */
+p, li, pre, td {
+    text-align: left;
+}
+
+/* Correção para o conteúdo de trabalhos */
+.trabalho-conteudo {
+    text-align: left;
+}
+
+/* Alinhamento para o texto pré-formatado */
+pre {
+    text-align: left;
+    margin-left: 0;
+}
+
+/* Garantir que flexbox não cause alinhamento indesejado */
+.content {
+    display: block; /* Caso esteja usando flexbox com justify-content */
+}
+
+/* Forçar alinhamento à esquerda */
+.task, .task * {
+    text-align: left !important;
+}
+
+h2, p, li, table, pre {
+    text-align: left !important;
+}
+
+.content-section {
+    text-align: left !important;
+}
+
+/* Corrigir layout das seções */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Corrigir alinhamento específico */
+#recursos, #contato, #trabalhos {
+    text-align: left !important;
+}
+
+#recursos *, #contato *, #trabalhos * {
+    text-align: left !important;
 }
