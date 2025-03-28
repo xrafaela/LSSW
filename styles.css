@@ -92,16 +92,39 @@ main {
     background-color: #fff;
 }
 
+/* Estilo do footer */
 footer {
     margin-top: 15px;
-    background-color: rgba(12, 12, 12, 0.7); 
+    background-color: rgba(12, 12, 12, 0.7);
     color: white;
-    padding: 7px;
-    text-align: center;
+    padding: 15px;
     border-radius: 10px;
+    text-align: center;
+}
+
+.footer-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.update-text {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 footer p {
@@ -112,12 +135,12 @@ footer p {
 
 table {
     width: 30%; /* Usando 100% para melhor responsividade */
-    max-width: 800px; /* Definindo largura máxima */
+    max-width: 800px; /* Definindo largura mï¿½xima */
     border-collapse: collapse;
     margin: 10px 0; 
     text-align: left;
     margin-left: 0;
-    margin-right: auto; /* Remove qualquer centralização automática */
+    margin-right: auto; /* Remove qualquer centralizaï¿½ï¿½o automï¿½tica */
 }
 
 th, td {
@@ -140,7 +163,7 @@ th {
     text-align: left;
 }
 
-/* Coluna de navegação */
+/* Coluna de navegaï¿½ï¿½o */
 .sidebar {
     width: 200px;
     background-color: #1a1a1a; /* Fundo mais escuro */
@@ -152,7 +175,7 @@ th {
     font-weight: 500; /* Medium para o menu lateral */
 }
 
-/* Estilo do menu de navegação */
+/* Estilo do menu de navegaï¿½ï¿½o */
 .nav-menu {
     list-style: none;
     padding: 0;
@@ -182,7 +205,7 @@ th {
     color: white;
 }
 
-/* Garantir que o título do menu também seja branco */
+/* Garantir que o tï¿½tulo do menu tambï¿½m seja branco */
 .sidebar h3 {
     color: white;
     border-bottom: 1px solid #444;
@@ -190,14 +213,14 @@ th {
     margin-top: 0;
 }
 
-/* Coluna de conteúdo */
+/* Coluna de conteï¿½do */
 .content {
     flex: 1;
     text-align: left;
     display: block; /* Caso esteja usando flexbox com justify-content */
 }
 
-/* Conteúdo */
+/* Conteï¿½do */
 .content-section {
     display: none;
     text-align: left;
@@ -235,49 +258,49 @@ ul li {
 }
 
 .has-submenu > a::after {
-    content: "?";
+    content: "?";  /* Seta para direita */
     font-size: 0.8em;
     margin-left: 5px;
 }
 
 .has-submenu > a.open::after {
-    content: "?";
+    content: "?";  /* Seta para baixo */
 }
 
-/* Alinhamento geral à esquerda */
+/* Alinhamento geral ï¿½ esquerda */
 .container, .content, .content-section, .task {
     text-align: left;
 }
 
-/* Corrigindo especificamente tabelas (caso estejam alinhadas à direita) */
+/* Corrigindo especificamente tabelas (caso estejam alinhadas ï¿½ direita) */
 table {
     text-align: left;
     margin-left: 0;
-    margin-right: auto; /* Remove qualquer centralização automática */
+    margin-right: auto; /* Remove qualquer centralizaï¿½ï¿½o automï¿½tica */
 }
 
-/* Corrigindo conteúdo textual */
+/* Corrigindo conteï¿½do textual */
 p, li, pre, td {
     text-align: left;
 }
 
-/* Correção para o conteúdo de trabalhos */
+/* Correï¿½ï¿½o para o conteï¿½do de trabalhos */
 .trabalho-conteudo {
     text-align: left;
 }
 
-/* Alinhamento para o texto pré-formatado */
+/* Alinhamento para o texto prï¿½-formatado */
 pre {
     text-align: left;
     margin-left: 0;
 }
 
-/* Garantir que flexbox não cause alinhamento indesejado */
+/* Garantir que flexbox nï¿½o cause alinhamento indesejado */
 .content {
     display: block; /* Caso esteja usando flexbox com justify-content */
 }
 
-/* Forçar alinhamento à esquerda */
+/* Forï¿½ar alinhamento ï¿½ esquerda */
 .task, .task * {
     text-align: left !important;
 }
@@ -290,7 +313,7 @@ h2, p, li, table, pre {
     text-align: left !important;
 }
 
-/* Corrigir layout das seções */
+/* Corrigir layout das seï¿½ï¿½es */
 .content-section {
     display: none;
 }
@@ -299,7 +322,7 @@ h2, p, li, table, pre {
     display: block;
 }
 
-/* Corrigir alinhamento específico */
+/* Corrigir alinhamento especï¿½fico */
 #recursos, #contato, #trabalhos {
     text-align: left !important;
 }
@@ -310,10 +333,10 @@ h2, p, li, table, pre {
 
 /* Aplicando Cormorant Garamond ao site */
 
-/* Para títulos */
+/* Para tï¿½tulos */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600; /* Semibold para títulos */
+    font-weight: 600; /* Semibold para tï¿½tulos */
     letter-spacing: 0.5px;
 }
 
@@ -323,7 +346,7 @@ strong, b {
     font-weight: 700; /* Bold para texto em negrito */
 }
 
-/* Para texto em itálico */
+/* Para texto em itï¿½lico */
 i, em {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
