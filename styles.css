@@ -1,6 +1,6 @@
 body {
-    font-size: 19px; /* Cormorant Garamond geralmente precisa de tamanho maior */
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px; /* Cormorant Infant também funciona bem neste tamanho */
+    font-family: 'Cormorant Infant', Georgia, serif;
     font-weight: 400; /* Regular para texto normal */
     line-height: 1.6;
    
@@ -59,11 +59,37 @@ header {
     align-items: center;
     background-color: rgba(12, 12, 12, 0.7); 
     width: 100%;
+    padding: 5px !important; /* Reduz o padding do header */
 }
 
 .header-text {
     flex-grow: 1;
-    
+}
+
+.header-text h1 {
+    font-family: 'Tangerine', cursive !important;
+    font-size: 3.5rem !important;
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    margin-bottom: 0; /* Remove espaço abaixo do h1 */
+    line-height: 1; /* Reduz a altura da linha */
+    margin: 0 !important; /* Remove margem */
+    line-height: 1 !important; /* Reduz espaço vertical */
+}
+
+.header-text p {
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    font-family: 'Tangerine', cursive !important;
+    font-size: 3rem !important;
+    margin-top: 0; /* Remove espaço acima do parágrafo */
+    line-height: 1; /* Reduz a altura da linha */
+    font-size: 2rem !important;
+    margin: 0 !important; /* Remove margem */
+    padding-top: 0 !important; /* Remove padding superior */
+    line-height: 1 !important; /* Reduz espaço vertical */
 }
 
 header img {
@@ -100,6 +126,7 @@ footer {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    font-family: 'Honk', system-ui;
 }
 
 .footer-content {
@@ -110,9 +137,10 @@ footer {
 }
 
 .update-text {
-    font-size: 0.8em;
+    font-size: 1.2rem;
     margin-bottom: 15px;
     text-align: center;
+    font-family: 'Honk', system-ui;
 }
 
 .footer-image {
@@ -171,7 +199,7 @@ th {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     color: white; /* Texto principal em branco */
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Infant', Georgia, serif;
     font-weight: 500; /* Medium para o menu lateral */
 }
 
@@ -258,13 +286,13 @@ ul li {
 }
 
 .has-submenu > a::after {
-    content: "?";  /* Seta para direita */
+    content: "∇";  /* Seta para direita */
     font-size: 0.8em;
     margin-left: 5px;
 }
 
 .has-submenu > a.open::after {
-    content: "?";  /* Seta para baixo */
+    content: "∇";  /* Seta para baixo */
 }
 
 /* Alinhamento geral � esquerda */
@@ -291,7 +319,8 @@ p, li, pre, td {
 
 /* Alinhamento para o texto pr�-formatado */
 pre {
-    text-align: left;
+    text-align: justify;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     margin-left: 0;
 }
 
@@ -333,20 +362,20 @@ h2, p, li, table, pre {
 
 /* Aplicando Cormorant Garamond ao site */
 
-/* Para t�tulos */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600; /* Semibold para t�tulos */
+    font-weight: 600; 
     letter-spacing: 0.5px;
 }
 
-/* Para elementos enfatizados */
+
 strong, b {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 700; /* Bold para texto em negrito */
 }
 
-/* Para texto em it�lico */
+
 i, em {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
@@ -359,4 +388,27 @@ h1 {
 
 h2 {
     font-size: 2em;
+}
+
+.footer-content .update-text {
+    font-family: 'Honk', cursive !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Adicionando uma regra extra para o span dentro do update-text */
+.update-text span {
+    font-family: 'Honk', cursive !important;
+}
+
+/* Estilos específicos para a fonte Honk */
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+.update-text, 
+.update-text i,
+#update-text,
+#update-text i {
+    font-family: 'Honk', cursive !important;
+    font-size: 1.4rem !important;
 }
