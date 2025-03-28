@@ -29,10 +29,10 @@ body::before {
 .task { 
     color: white;  
     margin: 10px 0; 
-    background-color: 0 0 10px rgba(24, 23, 23, 0.8);
+    background-color: 0 0 10px rgba(24, 23, 23, 0.8); /* ERRO AQUI */
     padding: 15px; 
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adicionando sombra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
    
 }
 
@@ -192,4 +192,34 @@ th {
 /* Melhorias para listas */
 ul li {
     margin-bottom: 5px;
+}
+
+/* Estilo para submenus */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.submenu.active {
+    display: block;
+}
+
+.submenu li {
+    margin-bottom: 5px;
+}
+
+.has-submenu > a::after {
+    content: "?";
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.has-submenu > a.open::after {
+    content: "?";
 }

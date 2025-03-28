@@ -26,6 +26,14 @@
             <ul class="nav-menu">
                 <li><a href="#" class="nav-link active" data-target="perfil">Perfil</a></li>
                 <li><a href="#" class="nav-link" data-target="trabalhos">Avaliação</a></li>
+                <li class="has-submenu">
+                    <a href="#" class="nav-link" data-toggle="submenu">Trabalhos</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="nav-link" data-target="trabalho1">Desafio🏆</a></li>
+                        <li><a href="#" class="nav-link" data-target="trabalho2">Trabalho 2</a></li>
+                        <li><a href="#" class="nav-link" data-target="trabalho3">Trabalho 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#" class="nav-link" data-target="recursos">Recursos</a></li>
                 <li><a href="#" class="nav-link" data-target="contato">Contato</a></li>
             </ul>
@@ -47,6 +55,61 @@
             </div>
             
             <!-- Seção de Trabalhos -->
+            <div class="content-section" id="trabalho1">
+                <div class="task">
+                    <h2>Desafio🏆 - I did it 🏆!!!</h2>
+                    <img src="desafio.png" alt="desafio">
+                    
+                    <!-- Aqui vai o conteúdo do seu primeiro trabalho -->
+                    <div class="trabalho-conteudo">                    
+                        <pre>                             
+1. Pesquisar Alojamentos Web
+Defina seus requisitos:
+Critério: Perguntas-Chave
+Tipo de site: Blog, e-commerce, portfólio, institucional?
+Tráfego esperado: Baixo, médio ou alto volume de acessos?
+Recursos técnicos: PHP, Node.js, banco de dados, SSL?
+Orçamento: Qual o valor mensal máximo?
+Suporte: Precisa de atendimento 24/7 em português?
+Tipos de Hospedagem:
+Tipo Indicado para Exemplos de Provedores Compartilhada	Sites pequenos, baixo tráfego	Hostinger, Bluehost VPS	Projetos
+ em crescimento	DigitalOcean, Linode Dedicada
+ Sites de grande porte: Liquid Web, A2 Hosting Cloud	
+ Escalabilidade automática: AWS, Google Cloud WordPress Gerida Sites em WordPress SiteGround, WP Engine
+________________________________________
+2. Comparar Alojamentos
+Critérios Essenciais
+O que verificar
+Desempenho: Uptime (≥99.9%), velocidade de carregamento, Segurança
+Certificado SSL, backups automáticos
+Suporte	Disponibilidade (chat, e-mail, telefone)
+Escalabilidade	Opções de upgrade conforme crescimento, Preço	Custo inicial vs. renovação, taxas extras
+
+Exemplo Prático: Criar um e-commerce
+
+1. Escolher hospedagem com:  
+   - Certificado SSL gratuito  
+   - Compatibilidade com WooCommerce/Magento  
+   - Backup diário  
+________________________________________
+3. Ferramentas Úteis
+• Testes de Velocidade: GTmetrix
+• Comparadores: HostAdvice
+• Verificação de Uptime: UptimeRobot
+
+________________________________________
+Conclusão:
+Priorizar segurança e escalabilidade se o projeto for crescer. 
+Para sites pessoais, focar em custo-benefício. 
+Sempre testar o suporte técnico antes de contratar! 
+
+                            </pre>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="content-section" id="trabalhos">
                 <div class="task">
                     <h2>Trabalhos e Avaliações</h2>
@@ -107,42 +170,51 @@
     </footer> 
     
     <script>
-        // Script para atualizar a data de modificação
+        // Atualiza a data de última modificação
         function updateLastModified() {
             const lastModified = new Date(document.lastModified);
             const formattedDate = lastModified.toLocaleString('pt-BR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
             });
             document.getElementById('update-time').textContent = formattedDate;
         }
         updateLastModified();
         
-        // Script para navegação interativa
+        // Menu principal e submenu
         document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const contentSections = document.querySelectorAll('.content-section');
-            
-            navLinks.forEach(link => {
+            // Navegação do menu principal
+            document.querySelectorAll('.nav-link[data-target]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     
                     // Remove classe ativa de todos os links
-                    navLinks.forEach(item => item.classList.remove('active'));
+                    document.querySelectorAll('.nav-link[data-target]').forEach(item => 
+                        item.classList.remove('active'));
                     
                     // Adiciona classe ativa ao link clicado
                     this.classList.add('active');
                     
                     // Esconde todos os conteúdos
-                    contentSections.forEach(section => section.classList.remove('active'));
+                    document.querySelectorAll('.content-section').forEach(section => 
+                        section.classList.remove('active'));
                     
                     // Mostra o conteúdo correspondente
                     const targetId = this.getAttribute('data-target');
                     document.getElementById(targetId).classList.add('active');
+                });
+            });
+            
+            // Controle do submenu
+            document.querySelectorAll('.has-submenu > a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Alterna o submenu
+                    const submenu = this.nextElementSibling;
+                    submenu.classList.toggle('active');
+                    this.classList.toggle('open');
                 });
             });
         });
