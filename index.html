@@ -93,7 +93,10 @@
             <!-- Adicione aqui o conteúdo do Efolio B, por exemplo: -->
            
         </p>Link para Efolio B.
-        <!-- Você pode inserir listas, imagens, links, etc. conforme necessário -->
+        <a href="https://xrafaela.github.io/RafaelaRodrigues/" target="_blank">
+  <img src="efolioB.png" alt="eFólio" />
+</a>
+        <!-- Você pode inserir listas -->
     </div>
 </div>
             <div class="content-section" id="trabalhos">
@@ -164,7 +167,7 @@
     </footer> 
     
     <script>
-        // Atualiza a data de última modificação
+       
         function updateLastModified() {
             const lastModified = new Date(document.lastModified);
             const formattedDate = lastModified.toLocaleString('pt-BR', {
@@ -175,37 +178,35 @@
         }
         updateLastModified();
         
-        // Menu principal e submenu
+   
         document.addEventListener('DOMContentLoaded', function() {
-            // Navegação do menu principal
+          
             document.querySelectorAll('.nav-link[data-target]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     
-                    // Remove classe ativa de todos os links
                     document.querySelectorAll('.nav-link[data-target]').forEach(item => 
                         item.classList.remove('active'));
                     
-                    // Adiciona classe ativa ao link clicado
+                   
                     this.classList.add('active');
                     
-                    // Esconde todos os conteúdos
+                   
                     document.querySelectorAll('.content-section').forEach(section => 
                         section.classList.remove('active'));
-                    
-                    // Mostra o conteúdo correspondente
+                  
                     const targetId = this.getAttribute('data-target');
                     document.getElementById(targetId).classList.add('active');
                 });
             });
             
-            // Controle do submenu
+          
             document.querySelectorAll('.has-submenu > a').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    // Alterna o submenu
+                  
                     const submenu = this.nextElementSibling;
                     submenu.classList.toggle('active');
                     this.classList.toggle('open');
