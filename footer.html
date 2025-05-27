@@ -1,0 +1,9 @@
+ <footer style="border: 2px solid #ccc; padding: 10px; border-radius: 5px; text-align: center;">
+  <p id="footer-info"><b>Rafaela Rodrigues</b> - </p> 
+  <script>
+    const now = new Date();
+    const options = { dateStyle: 'long', timeStyle: 'short' };
+    const dateTime = now.toLocaleString('pt-PT', options);
+    document.getElementById('footer-info').innerHTML += dateTime;
+  </script>
+</footer>

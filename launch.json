@@ -1,0 +1,13 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open saude.html",
+            "file": "c:\\Users\\rafaela.rodrigues\\OneDrive - Universidade Aberta\\LEI\\24.25\\21182 - Laboratório de Sistemas e Serviços Web\\trabalhos\\index.html"        }
+    ]
+}
