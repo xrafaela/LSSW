@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Cormorant Infant', Georgia, serif; 
+  font-family:  'Poiret One', Arial, sans-serif;
   font-size: 18px; 
   line-height: 1.6;   
   font-style: italic;   
@@ -20,12 +21,10 @@ body {
 .container {
   display: flex;
   min-height: 80vh;  
-  margin-bottom: 10px;
-  
+  margin-bottom: 10px;  
   gap: 10px; 
 }
-.nav-link:hover {
-   
+.nav-link:hover {   
     color: white;
 }
 
@@ -38,26 +37,26 @@ body {
 .sidebar {
   width: 200px; 
   padding: 10px;
-  border-radius: 10px;
-  
+  border-radius: 10px;  
+  font-family: 'Poiret One', Arial, sans-serif; /* Define a fonte do menu */
+  font-size: 20px; /* Mantém o tamanho da fonte */
   color: white;
-  
-  
 }
 
 .sidebar ul {
-  list-style: none;
+  list-style: none; /* Remove os marcadores da lista */
   padding: 0;
   margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaçamento entre os itens do menu */
 }
 
 .sidebar a {
   display: block;
-  font-size: 15px; 
+  font-family: 'Poiret One', Arial, sans-serif; /* Aplica a fonte aos links do menu */
+  font-size: 15px;
   padding: 8px 10px;
   color: white;
   text-decoration: none;
@@ -107,6 +106,7 @@ footer {
   margin-top: 5px;
   text-align: center;
   background-color: transparent;
+  font-size: 20px;
   border-top: 1px solid #fff;
 }
 
@@ -141,8 +141,7 @@ nav * {
 nav ul li ul.submenu {
   display: none;
   position: static; 
-  margin-left: 20px; 
- 
+  margin-left: 20px;  
   padding: 5px;
   border-radius: 3px;
 }
@@ -201,7 +200,7 @@ nav ul li a.active {
 }
 
 .text-container {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   gap: 10px;
 }
@@ -241,6 +240,7 @@ nav ul li a.active {
 .section-title {
   font-size: 1.5em;   
   margin-bottom: 0.5em;
+  
 }
 
 .centered-title {
@@ -264,8 +264,12 @@ nav ul li a.active {
 }
 
 .paixoes img {
-  max-width: 200px; 
-  
+  max-width: 200px;   
   margin: 0 auto; 
+}
+
+.centered-table {
+  border-spacing: 0 15px; 
+  border-collapse: separate; 
 }
 
