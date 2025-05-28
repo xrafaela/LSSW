@@ -32,5 +32,38 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       })
       .catch(error => console.error("Erro:", error));
-  });
   
+    const currentPage = window.location.pathname.split("/").pop(); // Obtém o nome do arquivo atual
+    const sidebarLinks = document.querySelectorAll(".sidebar a");
+  
+    sidebarLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active"); // Adiciona a classe 'active' ao link correspondente
+      }
+    });
+  
+    const menuItems = document.querySelectorAll("nav ul li");
+  
+    menuItems.forEach(item => {
+      const submenu = item.querySelector("ul.submenu");
+      if (submenu) {
+        item.addEventListener("mouseenter", () => {
+          submenu.style.display = "block";
+          submenu.style.opacity = "0";
+          submenu.style.transform = "translateY(-10px)";
+          setTimeout(() => {
+            submenu.style.opacity = "1";
+            submenu.style.transform = "translateY(0)";
+          }, 10);
+        });
+  
+        item.addEventListener("mouseleave", () => {
+          submenu.style.opacity = "0";
+          submenu.style.transform = "translateY(-10px)";
+          setTimeout(() => {
+            submenu.style.display = "none";
+          }, 300);
+        });
+      }
+    });
+  });

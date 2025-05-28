@@ -20,9 +20,14 @@
       <div class="main-content">
         <section>
           <div class="text-container">
-            <h1>Exercícios em PHP!</h1>
-          
+            <h1>O meu primeiro exercício em PHP!</h1>
+            <?php
+              $msg = 'O meu primeiro exercício em PHP!';
+              print $msg;
+            ?>
+          </div>
         </section>
+       
       </div>
     </div>
   </main>

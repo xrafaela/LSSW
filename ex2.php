@@ -18,10 +18,27 @@
         <div id="menu-placeholder"></div>
       </aside>
       <div class="main-content">
+        
+        </section>
         <section>
           <div class="text-container">
-            <h1>Exercícios em PHP!</h1>
-          
+            <h1>Calculadora PHP</h1>
+            <?php
+              // Números inteiros
+              $i1 = 10;
+              $i2 = 20;
+              $somaInteiros = $i1 + $i2;
+
+              // Números reais
+              $r1 = 10.0;
+              $r2 = 20.0;
+              $somaReais = $r1 + $r2;
+
+              // Exibindo os resultados
+              echo "<p>Soma de dois números inteiros ($i1 + $i2): <strong>$somaInteiros</strong></p>";
+              echo "<p>Soma de dois números reais ($r1 + $r2): <strong>$somaReais</strong></p>";
+            ?>
+          </div>
         </section>
       </div>
     </div>

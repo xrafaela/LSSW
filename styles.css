@@ -16,14 +16,14 @@ body {
   background-size: cover;
   color: white;
   position: relative;  
-  padding: 5px;
+  padding: 10px;
 }
 
 /* Configurações do cabeçalho */
 header {
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 1px;
   text-align: center;
 }
 
@@ -35,7 +35,7 @@ nav {
   border: 1px solid #fff;
   box-shadow: none;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 
 nav * {
@@ -46,8 +46,8 @@ nav * {
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10;
+  margin: 10;
 }
 
 nav ul li {
@@ -61,8 +61,13 @@ nav ul li a {
   padding: 10px 15px;
   display: block;
   color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 1px;
+  transition: background-color 0.3s, transform 0.2s ease; /* Adiciona transi??o */
+}
+
+nav ul li a:hover {
+  background-color: #444; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
 }
 
 nav ul li a.active {
@@ -70,69 +75,86 @@ nav ul li a.active {
    font-size: 18px !important;
   font-weight: bold;
   text-decoration: underline;
-  border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(2, 2, 2, 3.5); 
+  
 }
 
 /* Configurações do submenu */
 nav ul li ul.submenu {
   display: none; 
+  opacity: 0; /* Invis?vel inicialmente */
+  transform: translateY(-10px); /* Move o submenu para cima */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transi??o suave */
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10;
+  margin: 10;
   position: absolute; 
   top: 100%; 
-  left: 57%; 
+  left: 60%;
  
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1px;
   z-index: 1000;
 }
 
 nav ul li:hover > ul.submenu {
   display: block;
+  opacity: 1; /* Torna vis?vel */
+  transform: translateY(0); /* Move para a posi??o original */
 }
 
 nav ul li ul.submenu li {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 nav ul li ul.submenu li a {
+ display: block;
+  font-family: 'Poiret One', Arial, sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  color: white; 
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  
+ box-shadow: 2px 2px 5px rgba(2, 2, 2, 3); 
+  transition: background-color 0.2s;
 }
 
 nav ul li ul.submenu li a:hover {
-  border: 1px solid #ccc;
+  
+  box-shadow: 2px 2px 5px rgba(2, 2, 2,6); 
 }
 
 nav ul li ul.submenu li a.active {
   color: white;
-  font-size: 18px !important;
-  font-weight: bold;
- text-decoration: underline;
-  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(2, 2, 2, 3); 
+  border-radius: 1px; /* Mant?m os cantos arredondados */
+  text-decoration: underline;
+}
+
+/* Submenu dentro de outro submenu */
+nav ul li ul.submenu li ul.submenu {
+  top: 0;
+  left: 70%;
+box-shadow: 2px 2px 5px rgba(1, 1, 1, 2.5); 
 }
 
 /* Estilo para a setinha */
 nav ul li a .arrow {
   font-size: 0.8em;
   margin-left: 5px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Transi??o suave */
 }
 
 nav ul li:hover > a .arrow {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Gira a seta */
 }
 
 /* Configurações da barra lateral */
 .sidebar {
   width: 200px; 
   padding: 10px;
-  border-radius: 10px;  
+  border-radius: 1px;  
   font-family: 'Poiret One', Arial, sans-serif;
   font-size: 20px;
   color: white;
@@ -140,8 +162,8 @@ nav ul li:hover > a .arrow {
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10;
+  margin: 10;
 }
 
 .sidebar li {
@@ -155,15 +177,15 @@ nav ul li:hover > a .arrow {
   padding: 8px 10px;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 1px;
   transition: background-color 0.2s;
 }
 
 .sidebar a:hover,
 .sidebar a.active {
   color: white;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+   box-shadow: 2px 2px 5px rgba(2, 2, 2, 3); 
+  border-radius: 1px; /* Mant?m os cantos arredondados */
 }
 
 /* Configurações do conteúdo principal */
@@ -177,16 +199,16 @@ nav ul li:hover > a .arrow {
 .main-content {
   flex-grow: 1;
   padding: 5px;  
-  margin: 5px 0;
-  border-radius: 8px;
+  margin: 5px 10;
+  border-radius: 1px;
 }
 
 .main-content section {
-  background-color: transparent;
-  padding: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border: 1px solid #fff;
+  border: 2px solid #ccc; /* Cor e espessura da borda */
+  border-radius: 1px; /* Cantos arredondados */
+  padding: 10px; /* Espa?amento interno (dentro da borda) */
+  margin: 10px; /* Espa?amento externo (entre as bordas das se??es) */
+ 
 }
 
 .text-container {
@@ -214,7 +236,7 @@ nav ul li:hover > a .arrow {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 1px;
 }
 
 .video-container {
