@@ -1,61 +1,156 @@
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Configurações gerais */
 body, html {
   margin: 0;
   padding: 0;
-  font-family:  'Poiret One', Arial, sans-serif;
+  font-family: 'Poiret One', Arial, sans-serif;
   font-size: 18px; 
   line-height: 1.6;   
-  font-style: italic;   
   
 }
 
 body {
-   background: url("./backg.jpg") no-repeat center center fixed;
+  background: url("./backg.png") no-repeat center center fixed;
   background-size: cover;
   color: white;
   position: relative;  
   padding: 5px;
 }
 
-
-.container {
-  display: flex;
-  min-height: 80vh;  
-  margin-bottom: 10px;  
-  gap: 10px; 
-}
-.nav-link:hover {   
-    color: white;
+/* Configurações do cabeçalho */
+header {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.nav-link.active {
-    background-color: #3498db;
-    color: white;    
-    
+/* Configurações da barra de menu */
+nav {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  border: 1px solid #fff;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
+nav * {
+  font-style: normal;  
+  font-size: 16px !important;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+  display: block; /* Exibe os itens do menu na vertical */
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a.active {
+  color: white;
+   font-size: 18px !important;
+  font-weight: bold;
+  text-decoration: underline;
+  border-radius: 5px;
+}
+
+/* Configurações do submenu */
+nav ul li ul.submenu {
+  display: none; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute; 
+  top: 100%; 
+  left: 57%; 
+ 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+nav ul li:hover > ul.submenu {
+  display: block;
+}
+
+nav ul li ul.submenu li {
+  display: block;
+  margin-bottom: 5px;
+}
+
+nav ul li ul.submenu li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white; 
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li ul.submenu li a:hover {
+  border: 1px solid #ccc;
+}
+
+nav ul li ul.submenu li a.active {
+  color: white;
+  font-size: 18px !important;
+  font-weight: bold;
+ text-decoration: underline;
+  border-radius: 5px;
+}
+
+/* Estilo para a setinha */
+nav ul li a .arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover > a .arrow {
+  transform: rotate(180deg);
+}
+
+/* Configurações da barra lateral */
 .sidebar {
   width: 200px; 
   padding: 10px;
   border-radius: 10px;  
-  font-family: 'Poiret One', Arial, sans-serif; /* Define a fonte do menu */
-  font-size: 20px; /* Mantém o tamanho da fonte */
+  font-family: 'Poiret One', Arial, sans-serif;
+  font-size: 20px;
   color: white;
 }
 
 .sidebar ul {
-  list-style: none; /* Remove os marcadores da lista */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+  margin-bottom: 10px;
 }
 
 .sidebar a {
   display: block;
-  font-family: 'Poiret One', Arial, sans-serif; /* Aplica a fonte aos links do menu */
+  font-family: 'Poiret One', Arial, sans-serif;
   font-size: 15px;
   padding: 8px 10px;
   color: white;
@@ -66,15 +161,22 @@ body {
 
 .sidebar a:hover,
 .sidebar a.active {
-  background-color: #3498db;
   color: white;
- 
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
+/* Configurações do conteúdo principal */
+.container {
+  display: flex;
+  min-height: 80vh;  
+  margin-bottom: 10px;  
+  gap: 10px; 
+}
 
 .main-content {
   flex-grow: 1;
-  padding:5px;  
+  padding: 5px;  
   margin: 5px 0;
   border-radius: 8px;
 }
@@ -87,88 +189,11 @@ body {
   border: 1px solid #fff;
 }
 
-
-
-
-main {
-    padding: 0.5em;
-   
+.text-container {
+  display: flex; 
+  flex-direction: column;
+  gap: 10px;
 }
-
-main section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  gap: 10px; 
-}
-footer {
-  padding: 5px;
-  margin-top: 5px;
-  text-align: center;
-  background-color: transparent;
-  font-size: 20px;
-  border-top: 1px solid #fff;
-}
-
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-
-
-nav {
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto;
-  background-color: transparent;
-  border: 1px solid #fff;
-  box-shadow: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-nav, 
-nav * {
-  font-style: normal;  
-  font-size: 16px !important;
-  white-space: nowrap;
- 
-
-}
-
-nav ul li ul.submenu {
-  display: none;
-  position: static; 
-  margin-left: 20px;  
-  padding: 5px;
-  border-radius: 3px;
-}
-
-nav ul li:hover > ul.submenu {
-  display: block;
-}
-
-nav ul li ul.submenu li a {
-  color: white;
-  padding: 5px 10px;
-  display: block;
-  font-size: 15px !important;
-  text-decoration: none;
-}
-
-nav ul li ul.submenu li a.active {
-  text-decoration: underline;
-}
-
-nav ul li ul.submenu.show {
-  display: block !important;
-  position: static;
-  background-color: transparent;
-  padding-left: 10px;
-}
-
 
 .imagens-flex {
   display: grid;
@@ -192,19 +217,6 @@ nav ul li ul.submenu.show {
   border-radius: 8px;
 }
 
-nav ul li a.active {
-  background-color: #3498db; 
-  color: white;
-  text-decoration: underline;
-  
-}
-
-.text-container {
-  display: flex; 
-  flex-direction: column;
-  gap: 10px;
-}
-
 .video-container {
   position: relative;
   width: 80%;
@@ -223,6 +235,7 @@ nav ul li a.active {
   height: 100%;
 }
 
+/* Configurações de listas e formulários */
 .contactos-list {
   list-style: disc;
   padding-left: 20px;
@@ -237,10 +250,10 @@ nav ul li a.active {
   margin-top: 20px;
 }
 
+/* Configurações de títulos e seções */
 .section-title {
   font-size: 1.5em;   
   margin-bottom: 0.5em;
-  
 }
 
 .centered-title {
@@ -272,4 +285,15 @@ nav ul li a.active {
   border-spacing: 0 15px; 
   border-collapse: separate; 
 }
+
+/* Configurações do rodapé */
+footer {
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+  background-color: transparent;
+  font-size: 20px;
+  border-top: 1px solid #fff;
+}
+
 
