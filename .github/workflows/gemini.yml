@@ -1,0 +1,19 @@
+name: Teste Gemini IA
+
+on: [push]
+
+jobs:
+  rodar-gemini:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar script Python
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python seu_script.py
